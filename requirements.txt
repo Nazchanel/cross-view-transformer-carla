@@ -1,0 +1,15 @@
+hydra-core
+opencv-python
+torch
+torchvision
+omegaconf
+tqdm
+pyquaternion
+imgaug
+torchmetrics
+pytorch-lightning==1.9.5
+fvcore
+einops
+efficientnet-pytorch
+wandb
+tensorboard

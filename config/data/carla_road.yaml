@@ -1,0 +1,8 @@
+# @package _global_
+
+defaults:
+  - /data/carla
+
+data:
+  label_indices: [[1, 2]]
+  class: road

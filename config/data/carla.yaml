@@ -1,0 +1,37 @@
+dataset_dir: '/shares/datasets/carla/'
+json_dir: ${hydra:runtime.cwd}/data/     
+
+towns: 
+  - 'Town03_80npcs'
+  - 'Town05_100npcs'
+  - 'Town10_100npcs'
+  - 'Town10_80npcs'
+  - 'Town05_80npcs'
+  - 'Town10_50npcs'
+ood_town: 'Town04_100npcs' # used for training model on out-of-distribution data
+
+# used to generate dataset
+cameras: [[0, 1, 2, 3, 4, 5]]
+
+# required for train/eval
+# Takes the form [[i, j, ...], [p, q, ...]]
+# where [i, j, ...] are indices of individual classes (car, truck, ...),
+# and will be grouped into one semantic class (vehicle).
+label_indices: null                                   
+
+# label parameters
+bev:
+  h: 500  
+  w: 500
+  h_meters: 100.0
+  w_meters: 100.0
+  offset: 0.0
+
+# input parameters (not used in label generation)
+augment: 'none'
+image:
+  h: 224 # change
+  w: 480 # change
+  top_crop: 46 # change
+
+
